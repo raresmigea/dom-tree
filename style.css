@@ -1,0 +1,194 @@
+body {
+  background-color: #9fd8ee;
+}
+
+.tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.triangle-one {
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 100px solid rgb(20, 97, 27);
+  margin-top: -69px;
+}
+
+.triangle-two {
+  width: 0;
+  height: 0;
+  border-left: 90px solid transparent;
+  border-right: 90px solid transparent;
+  border-bottom: 150px solid rgb(20, 97, 27);
+  margin-top: -40px;
+}
+
+.triangle-three {
+  width: 0;
+  height: 0;
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
+  border-bottom: 200px solid rgb(20, 97, 27);
+  margin-top: -80px;
+}
+
+.triangle-four {
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 250px solid rgb(20, 97, 27);
+  margin-top: -120px;
+}
+
+.globe {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  /* animation: example 3s infinite; */
+  position: absolute;
+}
+
+.glpos-1 {
+  background: red;
+  top: 175px;
+  left: 630px;
+}
+
+.glpos-2 {
+  background: blue;
+  top: 225px;
+  left: 655px;
+}
+
+.glpos-3 {
+  background: yellow;
+  top: 315px;
+  left: 610px;
+}
+
+.glpos-4 {
+  background: orange;
+  top: 375px;
+  left: 680px;
+}
+
+.glpos-5 {
+  background: cyan;
+  top: 425px;
+  left: 640px;
+}
+
+.glpos-6 {
+  background: red;
+  top: 535px;
+  left: 700px;
+}
+
+.glpos-7 {
+  background: blue;
+  top: 510px;
+  left: 590px;
+}
+
+.light {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: yellow;
+  /* animation: example 3s infinite; */
+  position: absolute;
+}
+
+.lipos-1 {
+  top: 260px;
+  left: 620px;
+}
+
+.lipos-2 {
+  top: 300px;
+  left: 710px;
+}
+
+.lipos-3 {
+  top: 410px;
+  left: 590px;
+}
+
+.lipos-4 {
+  top: 510px;
+  left: 730px;
+}
+
+.lipos-5 {
+  top: 160px;
+  left: 666px;
+}
+
+.lipos-6 {
+  top: 417px;
+  left: 700px;
+}
+
+.lipos-7 {
+  top: 480px;
+  left: 610px;
+}
+
+@keyframes example {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: green;
+  }
+}
+
+.star {
+  margin: 50px 0;
+  position: relative;
+  display: block;
+  color: yellow;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid yellow;
+  border-left: 100px solid transparent;
+  transform: rotate(35deg) scale(0.75);
+}
+.star:before {
+  border-bottom: 80px solid yellow;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -45px;
+  left: -65px;
+  display: block;
+  content: '';
+  transform: rotate(-35deg);
+}
+.star:after {
+  position: absolute;
+  display: block;
+  color: yellow;
+  top: 3px;
+  left: -105px;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid yellow;
+  border-left: 100px solid transparent;
+  transform: rotate(-70deg);
+  content: '';
+}

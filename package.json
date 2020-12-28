@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/raresmigea/dom-tree/issues"
   },
-  "homepage": "https://github.com/raresmigea/dom-tree#readme"
+  "homepage": "https://github.com/raresmigea/dom-tree#readme",
+  "dependencies": {
+    "sass": "^1.30.0"
+  }
 }
