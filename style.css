@@ -44,6 +44,12 @@ body {
   margin-top: -120px;
 }
 
+.rectangle {
+  height: 50px;
+  width: 60px;
+  background-color: maroon;
+}
+
 .globe {
   border-radius: 50%;
   width: 25px;
@@ -53,44 +59,44 @@ body {
 
 .glpos-1 {
   background: red;
-  top: 175px;
-  left: 630px;
+  top: 20%;
+  left: 48%;
 }
 
 .glpos-2 {
   background: blue;
-  top: 225px;
-  left: 655px;
+  top: 26%;
+  left: 50%;
 }
 
 .glpos-3 {
   background: yellow;
-  top: 315px;
-  left: 610px;
+  top: 38%;
+  left: 49%;
 }
 
 .glpos-4 {
   background: orange;
-  top: 375px;
-  left: 680px;
+  top: 41%;
+  left: 52%;
 }
 
 .glpos-5 {
   background: cyan;
-  top: 425px;
-  left: 640px;
+  top: 49%;
+  left: 47%;
 }
 
 .glpos-6 {
   background: red;
-  top: 535px;
-  left: 700px;
+  top: 59%;
+  left: 53%;
 }
 
 .glpos-7 {
   background: blue;
-  top: 510px;
-  left: 590px;
+  top: 58%;
+  left: 46%;
 }
 
 .light {
@@ -98,7 +104,7 @@ body {
   width: 10px;
   height: 10px;
   background: yellow;
-  /* animation: example 3s infinite; */
+  animation: example 1s infinite;
   position: absolute;
 }
 
@@ -138,17 +144,8 @@ body {
 }
 
 @keyframes example {
-  0% {
-    background-color: red;
-  }
-  25% {
-    background-color: yellow;
-  }
   50% {
-    background-color: blue;
-  }
-  100% {
-    background-color: green;
+    box-shadow: 1px 1px 10px #ccc, -2px 1px 10px #ccc, 0 -1px 10px #ccc;
   }
 }
 
