@@ -109,38 +109,38 @@ body {
 }
 
 .lipos-1 {
-  top: 260px;
-  left: 620px;
+  top: 32%;
+  left: 48%;
 }
 
 .lipos-2 {
-  top: 300px;
-  left: 710px;
+  top: 33%;
+  left: 52%;
 }
 
 .lipos-3 {
-  top: 410px;
-  left: 590px;
+  top: 46%;
+  left: 54%;
 }
 
 .lipos-4 {
-  top: 510px;
-  left: 730px;
+  top: 47%;
+  left: 46%;
 }
 
 .lipos-5 {
-  top: 160px;
-  left: 666px;
+  top: 21%;
+  left: 51%;
 }
 
 .lipos-6 {
-  top: 417px;
-  left: 700px;
+  top: 59%;
+  left: 49%;
 }
 
 .lipos-7 {
-  top: 480px;
-  left: 610px;
+  top: 55%;
+  left: 53%;
 }
 
 @keyframes example {
