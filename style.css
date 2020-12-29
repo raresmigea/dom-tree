@@ -1,190 +1,86 @@
-body {
-  background-color: #9fd8ee;
-}
-
 .tree {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 300px;
+  height: 600px;
+  margin: auto;
+  position: relative;
+  /* the bottom of the tree */
+  border-bottom: 50px solid transparent;
+  background: linear-gradient(maroon 0 0) bottom/60px 50px no-repeat border-box;
 }
-
-.triangle-one {
-  width: 0;
-  height: 0;
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
-  border-bottom: 100px solid rgb(20, 97, 27);
-  margin-top: -69px;
-}
-
-.triangle-two {
-  width: 0;
-  height: 0;
-  border-left: 90px solid transparent;
-  border-right: 90px solid transparent;
-  border-bottom: 150px solid rgb(20, 97, 27);
-  margin-top: -40px;
-}
-
-.triangle-three {
-  width: 0;
-  height: 0;
-  border-left: 120px solid transparent;
-  border-right: 120px solid transparent;
-  border-bottom: 200px solid rgb(20, 97, 27);
-  margin-top: -80px;
-}
-
-.triangle-four {
-  width: 0;
-  height: 0;
-  border-left: 150px solid transparent;
-  border-right: 150px solid transparent;
-  border-bottom: 250px solid rgb(20, 97, 27);
-  margin-top: -120px;
-}
-
-.rectangle {
-  height: 50px;
-  width: 60px;
-  background-color: maroon;
-}
-
-.globe {
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
+/* the star */
+.tree::after {
+  content: '';
   position: absolute;
-}
-
-.glpos-1 {
-  background: red;
-  top: 20%;
-  left: 48%;
-}
-
-.glpos-2 {
-  background: blue;
-  top: 26%;
-  left: 50%;
-}
-
-.glpos-3 {
+  top: 60px;
+  left: calc(50% - 75px);
+  width: 150px;
+  height: 140px;
   background: yellow;
-  top: 38%;
-  left: 49%;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
 }
 
-.glpos-4 {
-  background: orange;
-  top: 41%;
-  left: 52%;
+/* the non animated globe */
+.tree::before {
+  content: '';
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(farthest-side, red 99%, transparent) 50% 30%,
+    radial-gradient(farthest-side, blue 99%, transparent) 60% 70%,
+    radial-gradient(farthest-side, orange 99%, transparent) 40% 50%,
+    radial-gradient(farthest-side, purple 99%, transparent) 30% 90%;
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
 }
-
-.glpos-5 {
-  background: cyan;
-  top: 49%;
-  left: 47%;
+/**/
+/* the main part of the tree */
+.tree > div::before,
+.tree > div::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  bottom: 0;
+  --g: linear-gradient(to bottom right, transparent 49.5%, green 50%);
+  background: var(--g) 90px calc(0 * 100% / 3), var(--g) 60px calc(1 * 100% / 3),
+    var(--g) 30px calc(2 * 100% / 3), var(--g) 0 calc(3 * 100% / 3);
+  background-size: 100% calc(100% / 4 + 100px);
+  background-repeat: no-repeat;
+  z-index: -1;
 }
-
-.glpos-6 {
-  background: red;
-  top: 59%;
-  left: 53%;
+.tree > div::after {
+  transform-origin: right;
+  transform: scaleX(-1);
 }
-
-.glpos-7 {
-  background: blue;
-  top: 58%;
-  left: 46%;
-}
-
-.light {
+/**/
+i {
   border-radius: 50%;
   width: 10px;
   height: 10px;
   background: yellow;
-  animation: example 1s infinite;
+  animation: ex 1s infinite;
   position: absolute;
 }
-
-.lipos-1 {
-  top: 32%;
-  left: 48%;
-}
-
-.lipos-2 {
-  top: 33%;
-  left: 52%;
-}
-
-.lipos-3 {
-  top: 46%;
-  left: 54%;
-}
-
-.lipos-4 {
-  top: 47%;
-  left: 46%;
-}
-
-.lipos-5 {
-  top: 21%;
-  left: 51%;
-}
-
-.lipos-6 {
-  top: 59%;
-  left: 49%;
-}
-
-.lipos-7 {
-  top: 55%;
-  left: 53%;
-}
-
-@keyframes example {
+@keyframes ex {
   50% {
     box-shadow: 1px 1px 10px #ccc, -2px 1px 10px #ccc, 0 -1px 10px #ccc;
   }
 }
 
-.star {
-  margin: 50px 0;
-  position: relative;
-  display: block;
-  color: yellow;
-  width: 0px;
-  height: 0px;
-  border-right: 100px solid transparent;
-  border-bottom: 70px solid yellow;
-  border-left: 100px solid transparent;
-  transform: rotate(35deg) scale(0.75);
-}
-.star:before {
-  border-bottom: 80px solid yellow;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
-  position: absolute;
-  height: 0;
-  width: 0;
-  top: -45px;
-  left: -65px;
-  display: block;
-  content: '';
-  transform: rotate(-35deg);
-}
-.star:after {
-  position: absolute;
-  display: block;
-  color: yellow;
-  top: 3px;
-  left: -105px;
-  width: 0px;
-  height: 0px;
-  border-right: 100px solid transparent;
-  border-bottom: 70px solid yellow;
-  border-left: 100px solid transparent;
-  transform: rotate(-70deg);
-  content: '';
+body {
+  background-color: #9fd8ee;
 }
