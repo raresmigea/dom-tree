@@ -2,6 +2,10 @@ body {
   background-color: #68bbdb;
 }
 
+a {
+  text-decoration: none;
+}
+
 .tree {
   width: 300px;
   height: 600px;
@@ -171,4 +175,10 @@ i {
   50% {
     transform: translateX(80px);
   }
+}
+
+.source {
+  position: absolute;
+  bottom: 4px;
+  right: 8px;
 }
