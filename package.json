@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/raresmigea/dom-tree#readme",
   "dependencies": {
-    "sass": "^1.42.1"
+    "sass": "^1.43.2"
   }
 }
